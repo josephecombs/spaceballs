@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    * {
+      border: thin solid blue;
+      padding: 0;
+      margin: 0;
+    }
+    canvas {
+      border: solid black 1px;
+    }
+    </style>
+    <title>Another go at learning canvas good</title>
+  </head>
+  <body>
+    <canvas id="tutorial" width='500' height='500'></canvas>
+    <script type='text/javascript'>
+      var canvas = document.getElementById("tutorial");
+      var ctx = canvas.getContext('2d');
+      
+      ctx.fillStyle = "rgb(200, 0, 0)";
+      ctx.fillRect (200, 100, 55, 50);
+      
+      ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+      ctx.fillRect(170, 130, 55, 50);
+      
+      ctx.beginPath();
+      ctx.moveTo(75,50);
+      ctx.lineTo(100,60);
+      ctx.lineTo(100,40);
+      ctx.fill();
+    
+    </script>
+    Here we are learning canvas again....
+  </body>
+</html>
