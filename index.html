@@ -1,18 +1,24 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>Asteroids</title>
-    
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.js"></script>
+    <title>Spaceballs</title>
+
     <style type="text/css" media="screen">
-    html, body, canvas {
+    html, body {
       padding: 0px;
       margin: 0px;
     }
     body { background-color: black;}
-    canvas { border: thin solid white;
+    canvas {
+            display: block  ;
+            height: 100%;
+            width: auto;
+            margin: 0px auto;
+            border: thin solid white;
             background-image: url("http://www.robmcbride.net/wp-content/uploads/2013/08/Space-space-584336_1600_1200.jpg");}
     </style>
-    
+
     <script src="lib/util.js"></script>
     <script src="lib/movingObject.js"></script>
     <script src="lib/asteroid.js"></script>
@@ -21,8 +27,8 @@
     <script src="lib/game.js"></script>
     <script src="lib/gameView.js"></script>
     <script src='lib/keymaster.js'></script>
-    
-  
+
+
   </head>
 
   <body>
@@ -32,8 +38,14 @@
       var canvasEl = document.getElementById("game-canvas");
       canvasEl.height = 750;
       canvasEl.width = 750;
-      new Asteroids.GameView().start(canvasEl);
+      var g = new Asteroids.Game();
+      new Asteroids.GameView(g).start(canvasEl);
+      $('canvas').click(function(event) {
+
+        g.ship.fireBullet(event);
+
+      })
     </script>
- 
+
   </body>
 </html>
