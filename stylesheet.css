@@ -1,3 +1,12 @@
+* {
+font-family: 'space age';
+}
+
+@font-face {
+  font-family: "space age";
+  src: url('spaceage.ttf');
+}
+
 html, body {
   padding: 0px;
   margin: 0px;
@@ -14,7 +23,7 @@ canvas {
 .scoreboard {
   position:absolute;
   height:50px;
-  width:200px;
+  width:400px;
   color:white;
   padding-left: 15px;
   font-size: 2em;
@@ -39,7 +48,7 @@ canvas {
 
 .menu {
   height: 500px;
-  width: 500px;
+  width: 750px;
   position: absolute;
   top: 100px;
   left: 100px;
