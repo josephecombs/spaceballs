@@ -55,3 +55,8 @@ canvas {
   color: white;
   font-size: 4em;
 }
+
+.highscores {
+  position: absolute;
+
+}
